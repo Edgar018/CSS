@@ -1,0 +1,283 @@
+*{
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Dancing Script', cursive; /*1*/
+  background-color: #02010a;
+}
+img{ /*3*/
+  -webkit-filter:drop-shadow(2px 2px 2px #02010a);
+  filter: drop-shadow(2px 2px 2px #02010a);
+
+}
+
+/*MEDIA QUERIES*/
+
+  /*MOBILE*/
+
+  @media screen and (max-width:899px){
+    body{
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      height: 9em;
+    }
+
+    header > h1{
+      position: absolute;
+      left: 0;
+      display: block;
+      position: relative;
+      top: 0.5em;
+      left: 0em;
+    }
+
+    #menu{
+      float: right;
+      position: relative;
+      top: 1.5em;
+      left: 0;
+      right: 1em;
+    }
+
+    #central{
+      width: 100%;
+    }
+
+    #central img {
+      margin: 2em auto;
+      width: 80%;
+    }
+
+    .secundaria{
+      display: block;
+      flex-direction: column;
+      margin: 0 auto;
+      background-color: #d5c75f;
+      text-align: center;
+      font-size: 1rem;
+    }
+      #paisajes figure{
+        margin: 1em auto;
+      }
+
+      #paisajes img {
+        width: 80%;
+      }
+
+      #retratos figure{
+        margin: 1em auto;
+      }
+
+      #retratos img {
+        width: 80%;
+      }
+      footer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .contacto, .terminos, .redes_sociales, .derechos {
+        width: 100%;
+      }
+      .galeria{
+        display: block;
+        text-align: center;
+      }
+      .galeria >img{
+        width: 80%;
+      }
+  }
+
+  /*DESKTOP*/
+  @media screen and (min-width:900px){
+    body{
+      width: 900px;
+      margin: 0 auto;
+    }
+    header{
+      height: 6em;
+    }
+    header > h1{
+      display: inline;
+      position: relative;
+      top: 0.5em;
+      left: 0.5em;
+    }
+
+    #menu{
+      float: right;
+      position: relative;
+      top: 1.5em;
+      right: 1em;
+    }
+
+    #contenido{
+      width: 100%;
+    }
+    #central img{
+      width: 80%;
+      padding: 2em 0 2em 0;
+    }
+
+    .secundaria{
+        display: flex;
+        flex-flow: row;
+        margin: 0 auto;
+        background-color: #d5c75f;
+        text-align: center;
+        font-size: 1rem;
+      }
+
+      #paisajes figure{
+        margin: 1em auto;
+      }
+
+      #paisajes img {
+        width: 80%;
+      }
+
+      #retratos figure{
+        margin: 1em auto;
+      }
+
+      #retratos img {
+        width: 80%;
+      }
+      footer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+      .contacto, .terminos, .redes_sociales, .derechos {
+        width: 25%;
+        padding: 5em;
+      }
+      .galeria{
+        display: block;
+        text-align: center;
+      }
+      .galeria > img{
+        width:25%
+      }
+
+  }
+
+/**CONTENIDO PAGINA**/
+
+header{
+  border-radius: 10px 10px 0 0;
+  background-color: #5b7989;
+  animation: slidein 1.5s;
+}
+  @-webkit-keyframes slidein{
+              0%{
+                margin-top: 150%;
+              }
+              60%{
+                margin-top: -5%;
+              }
+              100%{
+                margin-top: 0%;
+              }
+            }
+
+header > h1{
+  color: white;
+  text-shadow: 2px 2px #02010a;
+}
+
+a{
+  text-decoration: none;
+  word-spacing: 20px;
+  font-size: 1.2rem;
+}
+
+/* Secciopn Central*/
+#central{
+  background-color: #82c3a6;
+  text-align: center;
+}
+
+/* Seccion secundaria*/
+
+.secundaria{
+  background-color: #d5c75f;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid black;
+}
+
+#paisajes img{
+  -webkit-filter:drop-shadow(2px 2px 2px #82c3a6);
+  filter: drop-shadow(2px 2px 2px #82c3a6);
+  padding: 1.5em;
+
+}
+#paisajes img:hover{
+  transform: rotate(10deg);
+}
+
+#retratos img{
+  -webkit-filter:drop-shadow(2px 2px 2px #82c3a6);
+  filter: drop-shadow(2px 2px 2px #82c3a6);
+  padding: 1.5em;
+}
+#retratos img:hover{
+  transform: translate(20px, -5px);
+}
+
+/*Seccion footer*/
+
+footer{
+  border-radius: 0 0 10px 10px;
+  background-color: #C6d5c5;
+  padding: 2em;
+}
+
+.contacto, .terminos, .redes_sociales, .derechos {
+  padding: 0.5em;
+}
+
+.redes_sociales ul li {
+  list-style-type: none;
+}
+
+.redes_sociales li img{
+  width: 1em;
+  border: 0 none;
+}
+
+/*Paginas secundarias*/
+
+.galeria{
+  background-color: #d5c75f;
+}
+.galeria > img {
+  padding: 1em;
+}
+
+/*Tratamiento de imagenes*/
+
+.imagen1{
+  -webkit-filter:blur(10px);
+  filter:blur(10px);
+}
+
+.galeria > img:nth-child(even){
+  -webkit-filter:grayscale(100%);
+  filter:grayscale(100%);
+}
+
+.imagen3{
+  -webkit-filter:sepia(90%);
+  filter:sepia(90%);
+}
